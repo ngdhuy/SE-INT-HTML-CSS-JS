@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo form field</title>
+    <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+    <form name="frmRegister" action="Result.html" method="get">
+        <h1>Register User account</h1>
+        <input type="hidden" name="userid" value="us001" />
+        <div>
+            <span>Full name</span>
+            <input type="text" name="fullname" required placeholder="input your full name" size="30" minlength="3" maxlength="30" />
+        </div>
+        <div>
+            <span>Username</span>
+            <input type="text" name="username" required placeholder="input username" size="30" minlength="6" maxlength="20" />
+        </div>
+        <div>
+            <span>Password</span>
+            <input type="password" name="password" required placeholder="input password" size="30" minlength="6" maxlength="20" />
+        </div>
+        <div>
+            <span>Telephone number</span>
+            <input type="tel" name="tel" placeholder="input telephone number" size="30" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" />
+        </div>
+        <div>
+            <span>Coupons code</span>
+            <input type="text" name="coupon" value="hcmus001" readonly disabled />
+        </div>
+        <fieldset>
+            <legend>Account information</legend>
+            <div>
+                <span>Account type</span>
+                <label for="type-admin">Admin</label><input type="radio" name="type" id="type-admin" value="admin" />
+                <label for="type-employee">Employee</label><input type="radio" name="type" id="type-employee" value="employee" />
+                <label for="type-user">User</label><input type="radio" name="type" id="type-user" value="user" checked />
+            </div>
+            <div>
+                <span>Service list</span>
+                <ul>
+                    <li>
+                        <input type="checkbox" name="service" id="service-book" value="book" checked /><label for="service-book">Book</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="service" id="service-movie" value="movie" /><label for="service-movie">Movie</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="service" id="service-travel" value="travel" /><label for="service-travel">Travel</label>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <span>Department</span>
+                <select name="department">
+                    <optgroup label="Art">
+                        <option value="des">Design</option>
+                        <option value="cdw">Construct drawing</option>
+                        <option value="ads">Application design</option>
+                    </optgroup>
+                    <optgroup label="Engineer">
+                        <option value="sow" selected>Software</option>
+                        <option value="haw">Hardware</option>
+                        <option value="con">Construct</option>
+                        <option value="tra">Traffic</option>
+                    </optgroup>
+                </select>
+            </div>
+            <div>
+                <span>Type educate:</span>
+                <select name="type-educate" multiple>
+                    <option value="uni">University</option>
+                    <option value="col">College</option>
+                    <option value="dev">Developer</option>
+                    <option value="qc">Quality control</option>
+                </select>
+            </div>
+        </fieldset>
+        <div>
+            <span>Write something about yourselves</span><br />
+            <textarea name="note" wrap="off" cols="50" rows="10"></textarea><br />
+            <textarea name="note" wrap="soft" cols="50" rows="10" disabled>
+                Write something about yourselves Write something about yourselves
+                Write something about yourselves Write something about yourselves
+                Write something about yourselves Write something about yourselves
+                Write something about yourselves Write something about yourselves
+                Write something about yourselves Write something about yourselves
+                Write something about yourselves Write something about yourselves
+            </textarea>
+        </div>
+        <div>
+            <button type="submit">Submit</button>
+            <input type="reset" value="Reset form" />
+            <input type="button" value="click me" onclick="window.open('https://www.fit.hcmus.edu.vn/vn/');" />
+        </div>
+    </form>
+</body>
+</html>
