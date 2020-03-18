@@ -1,0 +1,10 @@
+span {
+    color: #cc3366;
+    display: inline-block;
+    min-width: 75px;
+}
+
+div {
+    margin: 5px;
+}
+
